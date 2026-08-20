@@ -1,0 +1,21 @@
+name = "render-ping-worker"
+main = "src/index.js"
+compatibility_date = "2025-06-10"
+
+[triggers]
+crons = ["*/14 1-6 * * *"] # 7AM–12PM IST every 14 minutes
+
+[observability.logs]
+enabled = true
+
+
+# Environment variables are configured in Cloudflare Dashboard
+# Go to: Cloudflare Dashboard > Workers & Pages > Your Worker > Settings > Variables
+# 
+# Required:
+# RENDER_APP_URL = "https://your-app.onrender.com"
+# 
+# Optional (with defaults):
+# HEALTH_ENDPOINT = "/healthz"
+# TIMEOUT_MS = "30000"
+# RETRY_ATTEMPTS = "2"
